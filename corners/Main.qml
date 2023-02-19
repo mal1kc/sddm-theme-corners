@@ -2,20 +2,23 @@ import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import "components"
-
+Rectangle {
+  color :"black"
 Item {
     id: root
 
     height: Screen.height
     width: Screen.width
-    
+
+
+
     Image {
         id: background
         
         anchors.fill: parent
         height: parent.height
         width: parent.width
-        fillMode: Image.PreserveAspectCrop
+        fillMode: Image.PreserveAspectFit
 
         source: config.Background
 
@@ -51,4 +54,5 @@ Item {
             anchors.fill: parent
         }
     }
+}
 }

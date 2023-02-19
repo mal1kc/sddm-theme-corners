@@ -6,7 +6,7 @@ import QtQml.Models 2.12
 Column {
     property var username: usernameField.text
 
-    spacing: 30
+    spacing: 10
 
     DelegateModel {
         id: userWrapper
@@ -128,7 +128,7 @@ Column {
             anchors.centerIn: userPicture
             height: inputWidth / 1.5 + (border.width * 2)
             width: inputWidth / 1.5 + (border.width * 2)
-            radius: height / 2
+            radius: height / 4
             border.width: config.UserPictureBorderWidth
             border.color: config.UserPictureBorderColor
             color: config.UserPictureColor
@@ -197,8 +197,8 @@ Column {
             id: userPicture
             source: ""
 
-            height: inputWidth / 1.5
-            width: inputWidth / 1.5
+            height: inputWidth / 4.5
+            width: inputWidth / 4.5
             anchors.horizontalCenter: parent.horizontalCenter
 
             fillMode: Image.PreserveAspectCrop
@@ -211,7 +211,7 @@ Column {
                 id: mask
 
                 anchors.fill: parent
-                radius: inputWidth / 3
+                radius: inputWidth / 6
                 visible: false
             }
         }
